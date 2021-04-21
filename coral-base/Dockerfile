@@ -28,4 +28,9 @@ RUN apt-get update \
         && apt-get autoremove -y \
         && rm -rf /var/lib/apt/lists/*
 
-#RUN pip3 install pillow
+RUN apt-get update \
+        && apt-get install -y --no-install-recommends \
+                libedgetpu1-std \
+        && apt-get clean \
+        && apt-get autoremove -y \
+        && rm -rf /var/lib/apt/lists/*
