@@ -21,7 +21,7 @@ RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" |
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 RUN apt-get update \
         && apt-get install -y --no-install-recommends \
-		libedgetpu1-std \
+		libedgetpu1-legacy-std \
 		python3-edgetpu \
 		python3-tflite-runtime \
         && apt-get clean \
