@@ -1,0 +1,2 @@
+# Example run
+docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb classify-example:latest /bin/bash
