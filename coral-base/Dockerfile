@@ -23,10 +23,9 @@ RUN apt-get update \
         && apt-get install -y --no-install-recommends \
 		libedgetpu1-std \
 		python3-edgetpu \
+		python3-tflite-runtime \
         && apt-get clean \
         && apt-get autoremove -y \
         && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp37-cp37m-linux_armv7l.whl
 #RUN pip3 install pillow
-#RUN apt-get install libedgetpu1-std -y
